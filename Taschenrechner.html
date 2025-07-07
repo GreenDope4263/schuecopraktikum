@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Taschenrechner</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Zusätzlicher Taschenrechner-Stil */
+      .rechner-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+      }
+
+      .rechner-display {
+        width: 300px;
+        font-size: 2rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        text-align: right;
+        border: 2px solid #003b71;
+        border-radius: 5px;
+      }
+
+      .rechner-buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 75px);
+        gap: 10px;
+      }
+
+      .rechner-buttons button {
+        padding: 1rem;
+        font-size: 1.2rem;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+
+      .rechner-buttons button:hover {
+        background-color: #ddd;
+      }
+
+      .rechner-buttons button:active {
+        background-color: #bbb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div class="navbar">
+        <img src="./Bilder/schücologo.png" height="40px" />
+        <div>
+          <a href="index.html">Start</a>
+          <a href="Schueco.html">Schüco</a>
+          <a href="Galerie.html">Galerie</a>
+          <a href="Praktikumsaufgaben.html">Meine Praktikumsaufgaben</a>
+          <a href="Taschenrechner.html">Taschenrechner</a>
+          <a href="Quellen.html">Quellen</a>
+          <a href="Impressum.html">Impressum</a>
+        </div>
+      </div>
+
+      <main class="container main-content">
+        <section id="ueber">
+            <h2>Über den Taschenrechner</h2>
+                <p>Ich hatte in der zweiten Woche als Aufgabe einen Taschenrechner mithilfe von Python (eine Programmiersprache) 
+                    zu erstellen. Es war sehr kompliziert und ich habe auch hilfe gebraucht. Mit Hilfe von den Azubis und ChatGPT 
+                    hat es dann doch geklappt und war auch dann früh fertig. Ich habe dann den nächsten Auftrag bekommen das 
+                    selbe nochmal in html (also die Sprache die für Websiten benutzt werden) zu machen. Hier ist nochmal 
+                    das Endergebnis
+                </p>
+        </section>
+        <section>
+          <h2>Taschenrechner</h2>
+          <div class="rechner-container">
+            <input type="text" id="anzeige" class="rechner-display" disabled />
+
+            <div class="rechner-buttons">
+              <button onclick="hinzufügen('7')">7</button>
+              <button onclick="hinzufügen('8')">8</button>
+              <button onclick="hinzufügen('9')">9</button>
+              <button onclick="hinzufügen('/')">/</button>
+
+              <button onclick="hinzufügen('4')">4</button>
+              <button onclick="hinzufügen('5')">5</button>
+              <button onclick="hinzufügen('6')">6</button>
+              <button onclick="hinzufügen('*')">*</button>
+
+              <button onclick="hinzufügen('1')">1</button>
+              <button onclick="hinzufügen('2')">2</button>
+              <button onclick="hinzufügen('3')">3</button>
+              <button onclick="hinzufügen('-')">-</button>
+
+              <button onclick="hinzufügen('0')">0</button>
+              <button onclick="hinzufügen('.')">.</button>
+              <button onclick="rechnen()">=</button>
+              <button onclick="hinzufügen('+')">+</button>
+
+              <button onclick="hinzufügen('(')">(</button>
+              <button onclick="hinzufügen(')')">)</button>
+              <button onclick="löschen()">C</button>
+              <button onclick="löschenLetztes()">←</button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <div class="section-transition"></div>
+
+      <footer class="footer">
+        © 2025 Schulprojektseite | Nicht offiziell | Praktikum bei Schüco International KG
+      </footer>
+    </div>
+
+    <script>
+      function hinzufügen(zeichen) {
+        const feld = document.getElementById("anzeige");
+        feld.value += zeichen;
+      }
+
+      function löschen() {
+        document.getElementById("anzeige").value = "";
+      }
+
+      function löschenLetztes() {
+        const feld = document.getElementById("anzeige");
+        feld.value = feld.value.slice(0, -1);
+      }
+
+      function rechnen() {
+        const feld = document.getElementById("anzeige");
+        try {
+          const ergebnis = eval(feld.value);
+          feld.value = ergebnis;
+        } catch {
+          feld.value = "Fehler";
+        }
+      }
+    </script>
+  </body>
+</html>

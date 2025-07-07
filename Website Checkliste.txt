@@ -1,0 +1,50 @@
+Website Checkliste
+-Startseite mit Einführung
+-CSS Datei 
+-Header mit Unterseiten
+	-Informationen zu Schüco
+		-Name
+		-Gründung
+		-Gründer
+		-Hauptsitz
+		-Mitarbeiter
+		-Umsatz
+		-Branche
+		-Produkte
+		-Kunden
+		-Tätigkeitsgebiet
+		-Besonderheiten
+		-Webstite
+	-Eine Galerie 
+	-Meine Praktikumaufgaben
+		- 1.Mo: Raspberry Pi5 mit Bildschirm, Werksführung
+		- 1.Di: Cybersecurity kennengelernt (Tickets, Phisching, Passwordspam), PythonTurtle
+		- 1.Mi: PC zusammengebaut und Windows und zwei speicherorte
+		- 1.Do: Im Cube wieder PythonTurtle und Cloudserver gezeigt 
+		- 1.Fr: Website Team kennengelernt und gezeigt was gemacht wird, LKW Simulator aufgebaut und gespielt, Website hacken
+		- 2.Mo: andere Praktikanten kennengelernt, Raspberry Pi5 mit Entfernungssensor, noch eine Campustour
+		- 2.Di: Taschenrechner mit Python erstellt und einen zweiten mit html
+		- 2.Mi: PuTTY Configuration (Damit kann man die Schüco Server konfigurieren), Stable Diffusion (selber Installiert und Trainert=
+		- 2.Do: Website Erstellen, Servertour
+		- 2.Fr: Website erstellen
+	-Beispiel Taschenrechner 
+	-Beispiel Galerie und Erklärung Stable Diffusion (Selber Trainiert und so)
+	-Quellen
+	-Impressum
+-Fußleiste mit Copyright und Schüco International KG
+-irgendwie online stellen
+-Handy format
+
+
+
+
+
+
+
+
+
+
+
+
+
+
